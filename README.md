@@ -69,6 +69,19 @@ The deployment backup and `deployment/theme-apply-result.json` are local private
 
 If you only want upstream's existing stock theme, no custom build is needed: choose **Catppuccin Mocha**, not this project's **Catppuccin Mocha Eira**.
 
+## Browser preview
+
+![Desktop theme preview](assets/preview-desktop.png)
+
+<details>
+<summary>Mobile viewport</summary>
+
+![Mobile theme preview](assets/preview-mobile.png)
+
+</details>
+
+These are real screenshots of the compiled program's first-run setup screen in an isolated, loopback-only preview instance. They contain no real account or library data. See [verification results](docs/verification.md) for what was actually exercised.
+
 ## Theme development
 
 - `src/mocha.js`: canonical palette tokens.

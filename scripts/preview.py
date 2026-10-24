@@ -24,7 +24,7 @@ def main():
     if stop.exists():
         stop.unlink()
     config = sandbox / 'navidrome.toml'
-    text = "Address = '127.0.0.1'\nPort = " + str(args.port) + "\nDefaultTheme = 'Catppuccin Mocha Eira'\nDefaultLanguage = 'en'\nEnableInsightsCollector = false\nEnableExternalServices = false\n"
+    text = "Address = '127.0.0.1'\nPort = " + str(args.port) + "\nDefaultTheme = 'Catppuccin Mocha Eira'\nDefaultLanguage = ''\nEnableInsightsCollector = false\nEnableExternalServices = false\n"
     for key, folder in [('DataFolder', 'data'), ('MusicFolder', 'music'), ('CacheFolder', 'cache')]:
         text += key + " = '" + (sandbox / folder).as_posix() + "'\n"
     text += "LogFile = '" + (sandbox / 'logs' / 'navidrome.log').as_posix() + "'\n"

@@ -13,6 +13,10 @@ DIST = ROOT / 'dist'
 def main():
     info = json.loads((DIST / 'build-info.json').read_text())
     binary = DIST / 'navidrome.exe'
+    data = binary.read_bytes()
+    offset = int.from_bytes(data[60:64], 'little')
+    if data[:2] != b'MZ' or data[offset:offset + 4] != b'PE\x00\x00' or int.from_bytes(data[offset + 4:offset + 6], 'little') != 0x8664:
+        raise RuntimeError('Windows amd64 package requires a real x86-64 PE binary')
     if hashlib.sha256(binary.read_bytes()).hexdigest() != info['sha256']:
         raise RuntimeError('Refusing to package a binary that differs from its build manifest')
     result = subprocess.check_output(['git', '-C', str(ROOT), 'ls-files', '-z'])
