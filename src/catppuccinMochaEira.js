@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-3.0-only
+// SPDX-License-Identifier: MIT
 // Copyright 2026 EiraWalker
 import { mocha as p } from './mocha.js'
 import stylesheet from './catppuccinMochaEira.css.js'

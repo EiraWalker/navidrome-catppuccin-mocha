@@ -100,6 +100,12 @@ The SVG is a palette/design preview, not a fabricated screenshot of a running in
 
 ## License and attribution
 
-Theme and integration code: **GPL-3.0-only**, copyright 2026 EiraWalker. Navidrome is GPL-3.0; its full license is retained in `LICENSE`. Catppuccin palette data is MIT, copyright Catppuccin; its notice is in `LICENSES/Catppuccin-MIT.txt`.
+Original theme code, tooling and documentation: **MIT**, copyright 2026 EiraWalker. The complete license is in [`LICENSE`](LICENSE). This grant applies to this project's original material, not to third-party code or assets.
+
+**Navidrome itself and the combined customized Navidrome executable remain GPL-3.0.** Its complete upstream license is preserved in [`LICENSES/Navidrome-GPL-3.0.txt`](LICENSES/Navidrome-GPL-3.0.txt). The MIT license for the original theme does not relicense the upstream application or the combined binary as MIT.
+
+Catppuccin palette data remains MIT, copyright Catppuccin; its original notice is retained in [`LICENSES/Catppuccin-MIT.txt`](LICENSES/Catppuccin-MIT.txt). See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for the licensing boundary, upstream patch context and assets.
+
+The existing `v1.0.0` tag and published release artifacts are not rewritten by this licensing update; retain and follow the notices shipped with those artifacts.
 
 Palette source: [catppuccin/palette](https://github.com/catppuccin/palette) at `07d02aa110ef9eb7e7427afca5c73ba9cf7f8ebd`. Theme integration follows [Navidrome's documented theme interface](https://www.navidrome.org/docs/developers/creating-themes/). This repository is not affiliated with either project.
