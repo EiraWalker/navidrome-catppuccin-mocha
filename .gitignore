@@ -1,0 +1,13 @@
+.build/
+.cache/
+.local/
+.playwright/
+.playwright-cli/
+dist/
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.env
+.env.*
+credentials*.json

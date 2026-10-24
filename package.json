@@ -1,0 +1,13 @@
+{
+  "name": "navidrome-catppuccin-mocha",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A complete Catppuccin Mocha theme for Navidrome, with mauve accents and a consistent player.",
+  "license": "GPL-3.0-only",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test tests/theme.test.mjs",
+    "preview": "node scripts/generate-preview.mjs"
+  }
+}

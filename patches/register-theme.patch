@@ -1,0 +1,19 @@
+diff --git a/ui/src/themes/index.js b/ui/src/themes/index.js
+--- a/ui/src/themes/index.js
++++ b/ui/src/themes/index.js
+@@ -11,6 +11,7 @@
+ import CatppuccinFrappeTheme from './catppuccinFrappe'
+ import CatppuccinMacchiatoTheme from './catppuccinMacchiato'
+ import CatppuccinMochaTheme from './catppuccinMocha'
++import CatppuccinMochaEiraTheme from './catppuccinMochaEira'
+ import CatppuccinLatteTheme from './catppuccinLatte'
+ import DraculaTheme from './dracula'
+ import NuclearTheme from './nuclear'
+@@ -37,6 +38,7 @@
+   CatppuccinLatteTheme,
+   CatppuccinMacchiatoTheme,
+   CatppuccinMochaTheme,
++  CatppuccinMochaEiraTheme,
+   DraculaTheme,
+   ElectricPurpleTheme,
+   ExtraDarkTheme,
