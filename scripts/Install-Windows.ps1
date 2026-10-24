@@ -14,6 +14,10 @@ $root = (Resolve-Path -LiteralPath $NavidromeRoot).Path
 $binary = (Resolve-Path -LiteralPath $Binary).Path
 $config = Join-Path $root 'navidrome.toml'
 $installed = Join-Path $root 'bin\navidrome.exe'
+$currentVersion = (& $installed --version | Out-String).Trim()
+if ($LASTEXITCODE -ne 0 -or $currentVersion -notin @('0.64.2 (10114574)', '0.64.2+mocha.1 (10114574-mocha1)')) {
+    throw 'Only the pinned Navidrome 0.64.2 deployment is supported; refusing an upgrade or downgrade.'
+}
 $infoPath = Join-Path (Split-Path -Parent $binary) 'build-info.json'
 $info = Get-Content -LiteralPath $infoPath -Raw | ConvertFrom-Json
 if ($info.upstreamCommit -ne '101145742f4762164202cb4858c9126258bdc463' -or $info.theme -ne $themeName) {
@@ -51,6 +55,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Native database backup failed; application bin
 $changed = $false
 $stopped = $false
 try {
+    if ([IO.File]::ReadAllText($config) -ne $originalConfig) { throw 'Configuration changed during backup; preserving that edit instead of installing.' }
     Stop-Service -Name $ServiceName
     (Get-Service -Name $ServiceName).WaitForStatus('Stopped', [TimeSpan]::FromSeconds(30))
     $stopped = $true
